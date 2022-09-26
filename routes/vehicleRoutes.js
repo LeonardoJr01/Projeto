@@ -45,7 +45,7 @@ router.post('/', async (req, res) => {
     try {
       const vehicles = await Vehicle.find()
   
-      res.status(200).json(people)
+      res.status(200).json(vehicles)
     } catch (error) {
       res.status(500).json({ erro: error })
     }
@@ -73,7 +73,7 @@ router.post('/', async (req, res) => {
   
     const { placa, marca, modelo, ano } = req.body
   
-    const person = {
+    const vehicle = {
       placa,
       marca,
       modelo,
